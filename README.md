@@ -23,6 +23,7 @@
 | 4 | 📢 宣传脚本 | 推文、公众号摘要、演讲开场白、邮件摘要 |
 | 5 | 🎙️ 播客音频 | 单人/双人播客脚本，可连接 TTS 一键生成 MP3 |
 | 6 | 📤 导出 Google Docs | 将已生成内容一键导出为 Google Docs 文档 |
+| 7 | 🔊 朗读输出 | 将刚生成的分析/审稿/宣传内容朗读出来，需 edge-tts MCP |
 
 > 1-4 功能无需 MCP；语音命令通过 Claude Desktop 内置语音输入免配置使用；音频文件转写需 Whisper MCP，未连接时提供替代方案；5 号播客在未连接 [TTS MCP](https://github.com/CatVinci-Studio/better-tts-mcp) 时自动降级为纯文字脚本；6 号导出在未连接 Google Drive MCP 时自动降级为 Markdown 格式输出。
 
@@ -133,7 +134,8 @@ paper-glance-skill/
     ├── 03_review.md        # 审稿意见
     ├── 04_promo.md         # 宣传脚本
     ├── 05_podcast.md       # 播客脚本 + 音频生成
-    └── 06_export_gdoc.md   # 导出到 Google Docs
+    ├── 06_export_gdoc.md   # 导出到 Google Docs
+    └── 07_read_aloud.md    # 朗读输出内容
 ```
 
 ---

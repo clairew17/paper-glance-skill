@@ -51,6 +51,7 @@ description: 论文全能处理工具。每当用户上传论文 PDF、粘贴论
 | 4 | 📢 宣传脚本 | 社交媒体推文、公众号摘要、演讲介绍 |
 | 5 | 🎙️ 播客音频 | 单人解说或双人对话脚本，可直接生成 MP3 音频 |
 | 6 | 📤 导出 Google Docs | 将已生成内容整理导出为 Google Docs 文档 |
+| 7 | 🔊 朗读输出 | 用语音朗读刚生成的内容，需 edge-tts MCP |
 | 0 | 全部 | 按 1→5 顺序依次生成所有内容 |
 
 回复数字即可，也可以说"帮我做审稿"这样的自然语言，或直接用语音说出指令。
@@ -70,9 +71,11 @@ description: 论文全能处理工具。每当用户上传论文 PDF、粘贴论
 | 4 / 宣传 | `/mnt/skills/user/paper-glance/modules/04_promo.md` |
 | 5 / 播客 | `/mnt/skills/user/paper-glance/modules/05_podcast.md` |
 | 6 / 导出 | `/mnt/skills/user/paper-glance/modules/06_export_gdoc.md` |
+| 7 / 朗读 | `/mnt/skills/user/paper-glance/modules/07_read_aloud.md` |
 | 0 / 全部 | 依次用 view 工具读取 01→02→03→04→05 全部模块并执行 |
 
 执行完成后，询问："还需要做其他的吗？"（展示剩余选项），并在末尾附加：
+> 🔊 想听朗读？回复 **7** 朗读刚生成的内容。
 > 📤 对结果满意？回复 **6** 可将已生成内容导出到 Google Docs。
 
 ---
