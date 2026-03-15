@@ -14,8 +14,9 @@
 
 ## ✨ 功能一览
 
-| # | 功能 | 说明 | 
+| # | 功能 | 说明 |
 |---|------|------|
+| 🎤 | 语音输入 | 语音命令控制 + 音频文件转写（内置免配置，音频文件需 Whisper MCP）|
 | 1 | 📊 深度分析报告 | 方法、实验、创新点的完整学术解读 |
 | 2 | 🧠 思维导图 | Mermaid 思维导图 + 方法流程图，对话内直接渲染 | 
 | 3 | 🔍 审稿意见 | Summary / Strengths / Weaknesses / Questions 专业格式 | 
@@ -23,7 +24,7 @@
 | 5 | 🎙️ 播客音频 | 单人/双人播客脚本，可连接 TTS 一键生成 MP3 |
 | 6 | 📤 导出 Google Docs | 将已生成内容一键导出为 Google Docs 文档 |
 
-> 1-4 功能无需 MCP；5 号播客在未连接 [TTS MCP](https://github.com/CatVinci-Studio/better-tts-mcp) 时会自动降级为纯文字脚本；6 号导出在未连接 Google Drive MCP 时会自动降级为 Markdown 格式输出。
+> 1-4 功能无需 MCP；语音命令通过 Claude Desktop 内置语音输入免配置使用；音频文件转写需 Whisper MCP，未连接时提供替代方案；5 号播客在未连接 [TTS MCP](https://github.com/CatVinci-Studio/better-tts-mcp) 时自动降级为纯文字脚本；6 号导出在未连接 Google Drive MCP 时自动降级为 Markdown 格式输出。
 
 ---
 
@@ -39,7 +40,7 @@
 
 ### 第二步：开始使用
 
-安装后，上传一篇论文 PDF，发送任意消息：
+安装后，上传一篇论文 PDF，发送任意消息（文字或语音）：
 
 ```
 "帮我看这篇论文"
@@ -47,6 +48,8 @@
 "帮我写审稿意见"
 "做一份宣传推文"
 ```
+
+或点击 🎤 麦克风图标直接说出指令，Claude 会自动识别并执行对应功能。
 
 Claude 会自动读取论文，展示功能菜单：
 
@@ -124,6 +127,7 @@ paper-glance-skill/
 ├── shared/
 │   └── paper_core.md       # 共享论文提取框架
 └── modules/
+    ├── 00_voice_input.md   # 语音输入 + 音频转写
     ├── 01_analysis.md      # 深度分析报告
     ├── 02_mindmap.md       # 思维导图 + 流程图
     ├── 03_review.md        # 审稿意见
